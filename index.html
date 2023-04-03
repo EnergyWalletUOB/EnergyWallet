@@ -33,10 +33,9 @@
         }
 
         .container {
-            width: 400px;
+            width: 500px;
             height: 500px;
             position: relative;
-            margin: 30px;
         }
 
         .box {
@@ -49,7 +48,85 @@
 
         .overlay {
             z-index: 0;
-            margin: 67px;
+            margin-top: 70px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            position: relative;
+            background: #f1f1f1f1;
+        }
+
+        /* Slides */
+        .mySlides {
+            display: none;
+            padding: 0px;
+            text-align: center;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: #888;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            position: absolute;
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
+        /* The dot/bullet/indicator container */
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        /* Add a background color to the active dot/circle */
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Add an italic font style to all quotes */
+        q {
+            font-style: italic;
+        }
+
+        /* Add a blue color to the author */
+        .author {
+            color: cornflowerblue;
         }
     </style>
 </head>
@@ -72,8 +149,10 @@
     </nav>
 
     <!-- Top menu on small screens -->
-    <header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding" style="background-color: #B01C2E;color: white;">
-        <a href="javascript:void(0)" class="w3-button w3-margin-right" style="background-color: #B01C2E;color: white;" onclick="w3_open()">☰</a>
+    <header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding"
+        style="background-color: #B01C2E;color: white;">
+        <a href="javascript:void(0)" class="w3-button w3-margin-right" style="background-color: #B01C2E;color: white;"
+            onclick="w3_open()">☰</a>
         <span>EnergyWallet</span>
     </header>
 
@@ -95,7 +174,9 @@
                 have neither the skills, time, nor the knowledge to access the available funding and to plan and
                 undertake the necessary retrofitting activates for their homes. This is particularly true for those in
                 energy poverty. This project will explore a software-supported systems integration solution to address
-                this challenge.
+                this challenge. Click <a
+                    href="https://research-information.bris.ac.uk/en/projects/energy-wallet">here</a> to visit the
+                University's project page.
             </p>
         </div>
 
@@ -105,142 +186,167 @@
             <hr style="width:50px;border:5px solid #B01C2E" class="w3-round">
         </div>
 
-         <!-- Feature 0 -->
-         <div class="w3-padding-64 w3-light-grey">
-            <div class="w3-row-padding">
-                <div class="w3-col l4 m6">
-                    <div class="container">
-                        <div class="box">
-                            <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
-                        </div>
-                        <div class="box overlay">
-                            <video width="200" controls autoplay>
-                                <source src="videos/feature0.mov" type="video/mp4">
-                            </video>
+        <!-- Slideshow -->
+
+        <div class="slideshow-container">
+
+            <!-- Feature 0 -->
+            <div class="mySlides w3-padding-64 w3-white">
+                <div class="w3-row-padding">
+                    <div class="w3-col l8 m6">
+                        <p><span class="w3-xlarge">See how other users are using EnergyWallet.</span> Before you sign up
+                            to
+                            EnergyWallet you can explore the app by using one of the mock user accounts.</p>
+                    </div>
+                    <div class="w3-col l4 m6">
+                        <div class="container">
+                            <div class="box">
+                                <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
+                            </div>
+                            <div class="box overlay">
+                                <video width="200" controls autoplay>
+                                    <source src="videos/feature0.mov" type="video/mp4">
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="w3-col l8 m6">
-                    <p><span class="w3-xlarge">See how other users are using EnergyWallet.</span> Before you sign up to 
-                        EnergyWallet you can explore the app by using one of the mock user accounts.</p>
+            </div>
+
+            <!-- Feature 1 -->
+            <div class="mySlides w3-padding-64 w3-white">
+                <div class="w3-row-padding">
+                    <div class="w3-col l8 m6">
+                        <p><span class="w3-xlarge">See which grants you're eligible for.</span> Complete the turn2us
+                            benefits calculator and link your results to
+                            Energy Wallet to keep track of what you're entitled to.
+                        </p>
+                    </div>
+                    <div class="w3-col l4 m6">
+                        <div class="container">
+                            <div class="box">
+                                <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
+                            </div>
+                            <div class="box overlay">
+                                <video width="200" controls autoplay>
+                                    <source src="videos/feature1.mov" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Feature 2 -->
+            <div class="mySlides w3-padding-64 w3-white">
+                <div class="w3-row-padding">
+                    <div class="w3-col l8 m6">
+                        <p><span class="w3-xlarge">View your EPC certificate.</span> Just tell us your postcode and
+                            we'll
+                            find your EPC certificate.
+                            Now you can see which retrofit activities need to be done.</p>
+                    </div>
+                    <div class="w3-col l4 m6">
+                        <div class="container">
+                            <div class="box">
+                                <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
+                            </div>
+                            <div class="box overlay">
+                                <video width="200" controls autoplay>
+                                    <source src="videos/feature2.mov" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="mySlides w3-padding-64 w3-white">
+                <div class="w3-row-padding">
+                    <div class="w3-col l8 m6">
+                        <p><span class="w3-xlarge">Fence off some of your weekly income.</span> Fence off some of your
+                            income for home
+                            improvement use only.
+                        </p>
+                    </div>
+                    <div class="w3-col l4 m6">
+                        <div class="container">
+                            <div class="box">
+                                <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
+                            </div>
+                            <div class="box overlay">
+                                <video width="200" controls autoplay>
+                                    <source src="videos/feature3.mov" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="mySlides w3-padding-64 w3-white">
+                <div class="w3-row-padding">
+                    <div class="w3-col l8 m6">
+                        <p><span class="w3-xlarge">Locate a local merchant to complete your retrofit activity.</span>
+                            Find
+                            the highest rated merchants in the area
+                            to carry out your retrofit activity.</p>
+                    </div>
+                    <div class="w3-col l4 m6">
+                        <div class="container">
+                            <div class="box">
+                                <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
+                            </div>
+                            <div class="box overlay">
+                                <video width="200" controls autoplay>
+                                    <source src="videos/feature4.mov" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="mySlides w3-padding-64 w3-white">
+                <div class="w3-row-padding">
+                    <div class="w3-col l8 m6">
+                        <p><span class="w3-xlarge">Keep a history of your retrofit and loan activity.</span> Use
+                            EnergyWallet to keep history of any retrofit activity or loans
+                            that you've taken.
+                        </p>
+                    </div>
+                    <div class="w3-col l4 m6">
+                        <div class="container">
+                            <div class="box">
+                                <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
+                            </div>
+                            <div class="box overlay">
+                                <video width="200" controls autoplay>
+                                    <source src="videos/feature5.mov" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
         </div>
 
-        <!-- Feature 1 -->
-        <div class="w3-padding-64 w3-white">
-            <div class="w3-row-padding">
-                <div class="w3-col l8 m6">
-                    <p><span class="w3-xlarge">See which grants you're eligible for.</span> Complete the turn2us
-                        benefits calculator and link your results to
-                        Energy Wallet to keep track of what you're entitled to.
-                    </p>
-                </div>
-                <div class="w3-col l4 m6">
-                    <div class="container">
-                        <div class="box">
-                            <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
-                        </div>
-                        <div class="box overlay">
-                            <video width="200" controls autoplay>
-                                <source src="videos/feature1.mov" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="w3-padding-64 w3-light-grey">
-            <div class="w3-row-padding">
-                <div class="w3-col l4 m6">
-                    <div class="container">
-                        <div class="box">
-                            <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
-                        </div>
-                        <div class="box overlay">
-                            <video width="200" controls autoplay>
-                                <source src="videos/feature2.mov" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="w3-col l8 m6">
-                    <p><span class="w3-xlarge">View your EPC certificate.</span> Just tell us your postcode and we'll
-                        find your EPC certificate.
-                        Now you can see which retrofit activities need to be done.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="w3-padding-64 w3-white">
-            <div class="w3-row-padding">
-                <div class="w3-col l8 m6">
-                    <p><span class="w3-xlarge">Fence off some of your weekly income.</span> Fence off some of your income for home
-                        improvement use only.
-                    </p>
-                </div>
-                <div class="w3-col l4 m6">
-                    <div class="container">
-                        <div class="box">
-                            <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
-                        </div>
-                        <div class="box overlay">
-                            <video width="200" controls autoplay>
-                                <source src="videos/feature3.mov" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="w3-padding-64 w3-light-grey">
-            <div class="w3-row-padding">
-                <div class="w3-col l4 m6">
-                    <div class="container">
-                        <div class="box">
-                            <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
-                        </div>
-                        <div class="box overlay">
-                            <video width="200" controls autoplay>
-                                <source src="videos/feature4.mov" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="w3-col l8 m6">
-                    <p><span class="w3-xlarge">Locate a local merchant to complete your retrofit activity.</span> Find the highest rated merchants in the area
-                        to carry out your retrofit activity.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Feature 5 -->
-        <div class="w3-padding-64 w3-white">
-            <div class="w3-row-padding">
-                <div class="w3-col l8 m6">
-                    <p><span class="w3-xlarge">Keep a history of your retrofit and loan activity.</span> Use EnergyWallet to keep history of any retrofit activity or loans
-                        that you've taken.
-                    </p>
-                </div>
-                <div class="w3-col l4 m6">
-                    <div class="container">
-                        <div class="box">
-                            <img src="images/phone.png" class="w3-image w3-margin-top" width="335" height="471">
-                        </div>
-                        <div class="box overlay">
-                            <video width="200" controls autoplay>
-                                <source src="videos/feature5.mov" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Researchers -->
         <div class="w3-container" id="researchers" style="margin-top:75px">
@@ -293,6 +399,34 @@
             document.getElementById("modal01").style.display = "block";
             var captionText = document.getElementById("caption");
             captionText.innerHTML = element.alt;
+        }
+
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
         }
     </script>
 
