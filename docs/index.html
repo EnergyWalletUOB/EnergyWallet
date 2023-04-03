@@ -33,8 +33,8 @@
         }
 
         .container {
-            width: 500px;
-            height: 500px;
+            width: 100%;
+            height: 550px;
             position: relative;
         }
 
@@ -128,6 +128,12 @@
         .author {
             color: cornflowerblue;
         }
+
+        @media screen and (min-width: 600px) {
+            .mobile-break {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -144,7 +150,7 @@
         <div class="w3-bar-block">
             <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">App</a>
             <a href="#features" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Features</a>
-            <a href="#researchers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a>
+            <a href="#researchers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Researchers</a>
         </div>
     </nav>
 
@@ -165,7 +171,7 @@
 
         <!-- Header -->
         <div class="w3-container" style="margin-top:80px" id="app">
-            <h1 class="w3-jumbo"><b>EnergyWallet</b></h1>
+            <h1 class="w3-jumbo"><b>Energy<br class="mobile-break">Wallet</b></h1>
             <h1 class="w3-xxxlarge" style="color: #B01C2E"><b>App.</b></h1>
             <hr style="width:50px;border:5px solid #B01C2E" class="w3-round">
             <p>To enable transition to net zero society, we in the UK must fully refurbish our housing stock, which in
